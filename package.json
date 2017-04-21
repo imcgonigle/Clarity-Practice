@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "@webcomponents/custom-elements": "^1.0.0-alpha.3",
+    "clarity-angular": "^0.9.1",
     "clarity-icons": "^0.9.1",
     "clarity-ui": "^0.9.1",
     "core-js": "^2.4.1",
