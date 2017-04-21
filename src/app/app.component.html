@@ -1,11 +1,62 @@
 <clr-main-container>
+  <clr-alert [clrAlertType]="'alert-danger'" [clrAlertAppLevel]="true">
+    <div class="alert-item">
+        <span class="alert-text">
+            This is an app level alert.
+        </span>
+        <div class="alert-actions">
+            <button class="btn alert-action">Fix</button>
+        </div>
+    </div>
+  </clr-alert>
+  <clr-header class="header-6">
+    <div class="branding">
+      <a href="..." class="nav-link">
+          <clr-icon shape="vm-bug"></clr-icon>
+          <span class="title">Project Clarity</span>
+      </a>
+    </div>
+    <div class="header-nav">
+        <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
+        <a href="javascript://" class="nav-link nav-text">Interactive Analytics</a>
+    </div>
+    <div class="header-actions">
+        <clr-dropdown clrMenuPosition="bottom-right">
+            <button class="nav-icon" clrDropdownToggle>
+                <clr-icon shape="cog"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu>
+                <a href="..." clrDropdownItem>About</a>
+                <a href="..." clrDropdownItem>Preferences</a>
+                <a href="..." clrDropdownItem>Log out</a>
+            </clr-dropdown-menu>
+        </clr-dropdown>
+    </div>
+  </clr-header>
+  <nav class="subnav">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Management</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Cloud</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Tenants</a>
+        </li>
+    </ul>
+  </nav>
   <div class="content-container">
-    <div class="content-area">
+    <main class="content-area">
       <p>
         Try it live:
-        <button class="btn btn-primary" (click)="basic = true">Show Modal</button>
+        <button class="btn btn-primary" (click)="modalOpened = true">Show Modal</button>
       </p>
-      <clr-modal [(clrModalOpen)]="basic">
+      <clr-modal [(clrModalOpen)]="modalOpened">
         <h3 class="modal-title">I have a nice title</h3>
         <div class="modal-body">
             <p>But not much to say...</p>
@@ -15,6 +66,119 @@
             <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
         </div>
       </clr-modal>
-    </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+          <div class="card-columns">
+              <div class="card">
+                  <div class="card-img">
+                      <img src="http://placehold.it/350x150">
+                  </div>
+                  <div class="card-block">
+                      <p class="card-text">
+                          ...
+                      </p>
+                  </div>
+              </div>
+              <div class="card card-block">
+                  <h3 class="card-title">Title</h3>
+                  <p class="card-text">
+                      ...
+                  </p>
+              </div>
+              <div class="card">
+                  <div class="card-block">
+                      <p class="card-text">
+                          ...
+                      </p>
+                  </div>
+                  <div class="card-img">
+                      <img src="http://placehold.it/350x150">
+                  </div>
+                  <div class="card-block">
+                      <p class="card-text">
+                          ...
+                      </p>
+                  </div>
+              </div>
+              <div class="card card-block">
+                  <h3 class="card-title">Title</h3>
+                  <p class="card-text">
+                      ...
+                  </p>
+              </div>
+              <div href="..." class="card">
+                  <div class="card-block">
+                      <p class="card-text">
+                          ...
+                      </p>
+                  </div>
+                  <div class="card-img">
+                      <img src="http://placehold.it/350x150">
+                  </div>
+              </div>
+              <div class="card card-block">
+                  <h3 class="card-title">Title</h3>
+                  <p class="card-text">
+                      ...
+                  </p>
+              </div>
+              <div class="card">
+                  <div class="card-block">
+                      <h3 class="card-title">Title</h3>
+                      <p class="card-text">
+                          ...
+                      </p>
+                  </div>
+                  <div class="card-footer">
+                      <a href="..." class="btn btn-primary">Action</a>
+                  </div>
+              </div>
+              <a href="..." class="card clickable">
+                  <div class="card-block">
+                      <p class="card-text">
+                          ...
+                      </p>
+                  </div>
+                  <div class="card-img">
+                      <img src="http://placehold.it/350x150">
+                  </div>
+              </a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <nav class="sidenav">
+            <section class="sidenav-content">
+                <a href="..." class="nav-link active">
+                    Nav Element 1
+                </a>
+                <a href="..." class="nav-link">
+                    Nav Element 2
+                </a>
+                <section class="nav-group collapsible">
+                    <input id="tabexample1" type="checkbox">
+                    <label for="tabexample1">Collapsible Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                    </ul>
+                </section>
+                <section class="nav-group">
+                    <input id="tabexample2" type="checkbox">
+                    <label for="tabexample2">Default Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                        <li><a class="nav-link active">Link 3</a></li>
+                        <li><a class="nav-link">Link 4</a></li>
+                        <li><a class="nav-link">Link 5</a></li>
+                        <li><a class="nav-link">Link 6</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
   </div>
 </clr-main-container>
